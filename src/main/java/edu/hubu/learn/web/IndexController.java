@@ -26,20 +26,22 @@ public class IndexController {
         return mav;
     }
 
-    @RequestMapping("/user")
-    public ModelAndView user() {
-        ModelAndView mav = new ModelAndView();
-        User user = userService.getUser(1l);
-        mav.addObject("user", user);
-        mav.setViewName("user");
-        return mav;
-    }
 
     @RequestMapping("/blog")
     public ModelAndView blog() {
         ModelAndView mav = new ModelAndView();
         Blog blog =blogService.getBlog(1l);
         mav.addObject("blog", blog);
+        mav.setViewName("user");
+        return mav;
+    }
+
+    
+    @RequestMapping("/user")
+    public ModelAndView user() {
+        ModelAndView mav = new ModelAndView();
+        User user =userService.getUser(1l);
+        mav.addObject("user", user);
         mav.setViewName("user");
         return mav;
     }

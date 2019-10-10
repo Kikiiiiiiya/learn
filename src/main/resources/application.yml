@@ -3,6 +3,7 @@ spring:
     data: classpath:db/data.sql
     schema: classpath:db/schema.sql
     url: jdbc:h2:~/db;MODE=MySql;DB_CLOSE_DELAY=-1
+    sql-script-encoding: utf-8
     username: sa
     password: sa
   jpa:

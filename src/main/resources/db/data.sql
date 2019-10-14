@@ -7,4 +7,6 @@ INSERT INTO `user` (id, username, password, role) VALUES ('6', 'user4', '1234', 
 
 
 INSERT INTO `blog` (id,title,content) VALUES ('1','song','12345678');
+INSERT INTO `blog` (id,title,content) VALUES ('2','快乐学习','学习使我快乐');
+INSERT INTO `blog` (id,title,content) VALUES ('3','好好睡觉','作息规律');
 COMMIT;

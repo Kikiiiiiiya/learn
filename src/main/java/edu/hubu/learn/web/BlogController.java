@@ -56,8 +56,19 @@ public class BlogController {
         return mav;
 
     }
+    @RequestMapping("/add")
+    public ModelAndView addBlog() {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("blog_add");
+        return mav;
+    }
 
-
+    @RequestMapping("/do_add")
+    public ModelAndView doAddBlog(Blog blog) {
+        blogService.addBlog(blog);
+        ModelAndView mav = new ModelAndView("redirect:/blog/list");
+        return mav;
+    }
 
 
 

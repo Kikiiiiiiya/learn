@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.hubu.learn.dao.BlogDao;
-import edu.hubu.learn.dao.UserDao;
+
 import edu.hubu.learn.entity.Blog;
-import edu.hubu.learn.entity.User;
+
 
 @Service
 public class BlogService {
@@ -25,7 +25,8 @@ public class BlogService {
 
         return blogDao.findAll();
 
-
-
+    }
+    public Blog addBlog(Blog blog) {
+        return blogDao.save(blog);
     }
 }

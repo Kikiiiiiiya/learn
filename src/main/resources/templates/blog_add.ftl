@@ -22,23 +22,22 @@
     <div class="row">
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
-          <li role="presentation" class="active"><a href="/blog/list">列表</a></li>
-          <li role="presentation"><a href="/blog/add">新增</a></li>
+          <li role="presentation"><a href="/blog/list">列表</a></li>
+          <li role="presentation" class="active"><a href="/blog/add">新增</a></li>
         </ul>
       </div>
       <div class="col-md-8">      
-        <table class="table table-hover">
-          <thead>
-          <th>ID</th><th>标题</th><th>内容</th>
-          </thead>
-          <tbody>
-          <#list blogs as blogs>
-          <tr>
-         <td>${blogs.id}</td><td>${blogs.title}</td><td>${blogs.content}</td>
-         </tr>
-         </#list>
-          </tbody>
-        </table>
+        <form action="/blog/do_add">
+            <div class="form-group">
+                <label for="title">标题</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="请输入标题">
+            </div>
+            <div class="form-group">
+                <label for="content">内容</label>
+                <input type="content" class="form-control" id="content" name="content" placeholder="请输入内容">
+            </div>
+            <button type="submit" class="btn btn-default">确认</button>
+        </form>
       </div>
     </div>
   </div>

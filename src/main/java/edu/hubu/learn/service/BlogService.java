@@ -29,4 +29,12 @@ public class BlogService {
     public Blog addBlog(Blog blog) {
         return blogDao.save(blog);
     }
+
+    public void deleteBlog(Long id) {
+        blogDao.deleteById(id);
+    }
+
+    public void modifyBlog(Blog blog) {
+        blogDao.save(blog);
+    }
 }

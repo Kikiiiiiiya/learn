@@ -1,7 +1,7 @@
 package edu.hubu.learn.web;
 
 
-
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 
@@ -41,6 +41,13 @@ public class BlogController {
 
     }
 
+    @RequestMapping("/delete/{id}")
+    public ModelAndView delete(@PathVariable Long id) {
+        blogService.deleteBlog(id);
+        ModelAndView mav = new ModelAndView("redirect:/blog/list");
+        return mav;
+    }
+
 
     @RequestMapping("/list")
     public ModelAndView blogs() {
@@ -56,6 +63,8 @@ public class BlogController {
         return mav;
 
     }
+
+   
     @RequestMapping("/add")
     public ModelAndView addBlog() {
         ModelAndView mav = new ModelAndView();
@@ -69,7 +78,20 @@ public class BlogController {
         ModelAndView mav = new ModelAndView("redirect:/blog/list");
         return mav;
     }
+    @RequestMapping("/modify/{id}")
+    public ModelAndView modifyBlog(@PathVariable Long id) {
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("blog", blogService.getBlog(id));
+        mav.setViewName("blog_modify");
+        return mav;
+    }
 
+    @RequestMapping("/do_modify")
+    public ModelAndView doModifyBlog(Blog blog) {
+        blogService.modifyBlog(blog);
+        ModelAndView mav = new ModelAndView("redirect:/blog/list");
+        return mav;
+    }
 
 
 } 

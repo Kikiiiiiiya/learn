@@ -23,7 +23,7 @@
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
           <li role="presentation" class="active"><a href="/blog/list">列表</a></li>
-          <li role="presentation"><a href="/blog/add">新增</a></li>
+         <li role="presentation"><a href="/blog/add">新增</a></li>
         </ul>
       </div>
       <div class="col-md-8">      

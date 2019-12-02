@@ -22,6 +22,6 @@ CREATE TABLE `blog` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) DEFAULT NULL comment '标题',
   `content` varchar(5000) DEFAULT NULL comment '内容',
-
+  `avatar_url` varchar(200) DEFAULT '' comment '头像',  
   PRIMARY KEY (`id`)
 );

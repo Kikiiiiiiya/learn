@@ -22,27 +22,19 @@
     <div class="row">
       <div class="col-md-4">
         <ul class="nav nav-pills nav-stacked">
-          <li role="presentation" class="active"><a href="/blog/list">列表</a></li>
-         <li role="presentation"><a href="/blog/add">新增</a></li>
-         <li role="presentation"><a href="/blog/search">搜索</a></li>
+          <li role="presentation"><a href="/blog/list">列表</a></li>
+          <li role="presentation"><a href="/blog/add">新增</a></li>
+          <li role="presentation" class="active"><a href="#">搜索</a></li>
         </ul>
       </div>
       <div class="col-md-8">      
-        <table class="table table-hover">
-          <thead>
-          <th>ID</th><th>标题</th><th>内容</th><th>头像</th><th>删除</th><th>修改</th><th>头像</th>
-          </thead>
-          <tbody>
-          <#list blogs as blogs>
-          <tr>
-          <td>${blogs.id}</td><td>${blogs.title}</td><td>${blogs.content}</td><td>${blogs.avatar}</td>
-          <td><a href="/blog/delete/${blogs.id}">删除</a></td>
-          <td><a href="/blog/modify/${blogs.id}">修改</a></td>
-          <td><a href="/blog/add_avatar/${blogs.id}">上传</a></td>
-         </tr>
-         </#list>
-          </tbody>
-        </table>
+        <form action="/blog/do_search" method="get">
+            <div class="form-group">
+                <label for="keyword">关键词</label>
+                <input type="text" class="form-control" id="keyword" name="keyword" placeholder="请输入搜索关键词">
+            </div>
+            <button type="submit" class="btn btn-default">确认</button>
+        </form>
       </div>
     </div>
   </div>

@@ -25,6 +25,7 @@
           <li role="presentation"><a href="/blog/list">列表</a></li>
           <li role="presentation"><a href="/blog/add">新增</a></li>
           <li role="presentation" class="active"><a href="#">修改</a></li>
+         <li role="presentation"><a href="/user/search">搜索</a></li>
        
         </ul>
       </div>

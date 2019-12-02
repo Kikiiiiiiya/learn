@@ -15,4 +15,8 @@ public class Blog {
     private String title;
 
     private String content;
+
+    @Column(name="avatar_url")
+    private String avatar;
+
 }
